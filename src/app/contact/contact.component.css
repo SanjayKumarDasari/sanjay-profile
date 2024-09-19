@@ -1,0 +1,72 @@
+
+
+.contact-container {
+    padding: 100px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 60%;
+    margin: 50px;
+    align-content: center;
+}
+
+.caption {
+    font-family: 'Lato', sans-serif;
+    font-size: 0.875rem; /* Slightly smaller than the paragraph text */
+    color: #777; /* Lighter color for captions */
+    text-align: center;
+    margin-top: 5px;
+}
+
+.contact-section {
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+    display: flex;
+}
+
+.intro-text {
+    font-family: 'Lato', sans-serif;
+    font-size: 1.5em; /* Slightly smaller than the paragraph text */
+    color: #777; /* Lighter color for captions */
+    text-align: center;
+    margin-top: 5px;
+}
+
+.contact-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+}
+
+.cta {
+    font-size: 2em;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.cta:hover {
+    color: #007bff;
+}
+
+/* Specific icon color can be added if needed */
+#insta {
+    color: #E4405F;
+}
+
+#mail {
+    color: #D44638;
+}
+
+#wapp {
+    color: #25D366;
+}
+
+#lin {
+    color: #0077B5;
+}
+
+#tele {
+    color: #0088CC;
+}

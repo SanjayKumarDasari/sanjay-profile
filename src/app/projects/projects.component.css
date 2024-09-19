@@ -1,0 +1,124 @@
+@keyframes slideInUp {
+  from {
+      transform: translateY(50px);
+      opacity: 0;
+  }
+  to {
+      transform: translateY(0);
+      opacity: 1;
+  }
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+    color: #343434; /* Text color for contrast */
+    margin: 0 0;
+    padding: 0%;
+    font-family: 'Lato', sans-serif; /* Smooth, readable font for body text */
+    text-align: center;
+    color: #555; /* Softer text color */
+    align-items: center; /* Center items vertically */
+    justify-content: center; /* Center items horizontally */
+    overflow: hidden; /* Hide overflow from the container */
+  }
+
+ /* Add this to your CSS file */
+
+.projects-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center items horizontally */
+  gap: 40px; /* Spacing between cards */
+  padding: 100px 20px 20px; /* Adjust padding as needed */
+  position: relative;
+  z-index: 10; /* Ensure it stays above lower elements */
+  height: 50%; /* Full height of the container */
+  overflow-y: auto; /* Enable vertical scrolling */
+  scroll-snap-type: y mandatory; /* Enable snap scrolling */
+}
+
+
+.project-card {
+  display: flex;
+  flex-direction: row;
+  background-color: rgba(255, 255, 255, 0.1); /* Slightly white transparent background */
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  opacity: 0.5; /* Start with faded */
+  transform: scale(0.9); /* Slightly scaled down */
+  transition: all 0.5s ease;
+  z-index: 5; /* Lower than nav but above background */
+  width: 100%; /* Ensure it has a width for centering */
+  max-width: 800px; /* Optional: Max width for large screens */
+  scroll-snap-align: center; /* Snap to center */
+}
+
+.space {
+  display: flex;
+  flex-direction: row;
+  opacity: 0; /* Start with faded */
+  transform: scale(0.9); /* Slightly scaled down */
+  transition: all 0.5s ease;
+  z-index: 5; /* Lower than nav but above background */
+  width: 100%; /* Ensure it has a width for centering */
+  max-width: 800px; /* Optional: Max width for large screens */
+  scroll-snap-align: center; /* Snap to center */
+  min-height: 5vh;
+}
+
+.project-card.highlighted {
+  opacity: 1; /* Make fully visible */
+  transform: scale(1); /* Scale to full size */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+  z-index: 10; /* Ensure it's on top */
+}
+
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .projects-section::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+  /* Hide scrollbar for IE, Edge and Firefox */
+
+
+.project-card.animate {
+  opacity: 1;
+  transform: scale(1); /* Full size when active */
+  z-index: 20; /* Higher z-index when active */
+}
+
+.image-section {
+  flex: 1;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.image-section img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.content-section {
+  flex: 2;
+  padding: 30px;
+}
+
+p {
+  letter-spacing: 0.5px;
+  font-weight: 100;
+  justify-content: center;
+  text-align: center;
+  line-height: 1;
+}
+
+@media (max-width: 768px) {
+  .project-card {
+      flex-direction: column;
+  }
+
+  .image-section,
+  .content-section {
+      width: 100%;
+  }
+}

@@ -1,0 +1,13 @@
+<div class="education-container">
+  <div class="education-card" *ngFor="let education of educations">
+    <div class="image-section">
+      <img [src]="education.image" alt="{{education.institution}}">
+    </div>
+    <div class="content-section">
+      <div class="year-badge">{{ education.year }}</div>
+      <h3 [innerHTML]="education.title"></h3>
+      <p>{{ education.institution }}</p>
+      <p>{{ education.grade }}</p>
+    </div>
+  </div>
+</div>

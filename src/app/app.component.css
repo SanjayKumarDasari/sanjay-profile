@@ -1,0 +1,42 @@
+/* Reset margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Navigation Bar */
+nav {
+  background: transparent; /* Transparent background to blend into the page */
+  position: fixed; /* Fix it at the top of the page */
+  width: 100%; /* Full width */
+  display: flex;
+  justify-content: right; /* Center the nav items */
+  padding: 15px 5vw; /* Space around the nav items */
+  z-index: 1000; /* Keep it on top of other elements */
+}
+
+/* Nav Links */
+nav a {
+  text-decoration: none; /* Remove underline */
+  color: #3b3a3a; /* Link text color */
+  font-weight: bold; /* Bold text */
+  padding: 5px 3vw; /* Space inside each link */
+  margin: 0 0px; /* Space between links */
+  border-radius: 0px; /* Rounded corners */
+  /* background: rgba(0, 0, 0, 0.5); Semi-transparent background for nav links */
+  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: background 0.3s, box-shadow 0.3s; /* Smooth transition on hover */
+}
+
+/* Hover Effects */
+nav a:hover {
+  /* background: rgba(255, 255, 255, 0.2); Lighten background on hover */
+  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow on hover */
+}
+
+/* Active State */
+nav a.active {
+  /* background: rgba(255, 255, 255, 0.3); Highlight the active link */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow for active link */
+}
