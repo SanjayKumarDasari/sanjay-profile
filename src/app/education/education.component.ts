@@ -28,7 +28,7 @@ export class EducationComponent implements AfterViewInit {
     {
       image: '/assets/btech.jpeg',
       title: 'B.Tech',
-      institution: 'GAYATRI VIDYA PARISHAD COLLEGE OF ENGINEERING',
+      institution: 'Gayatri Vidya Parishad College Of Engineering',
       grade: '8.2/10',
       year: '2021'
     },

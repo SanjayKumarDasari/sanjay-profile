@@ -1,9 +1,16 @@
-<nav>
-  <a routerLink="/home" routerLinkActive="active">Home</a>
-  <a routerLink="/projects" routerLinkActive="active">Projects</a>
-  <a routerLink="/skills" routerLinkActive="active">Skills</a>
-  <a routerLink="/education" routerLinkActive="active">Education</a>
-  <a routerLink="/contact" routerLinkActive="active">Contact</a>
+<nav [class.active]="isMenuOpen">
+  <div class="hamburger" (click)="toggleMenu()">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+  <div class="nav-links">
+    <a routerLink="/home" routerLinkActive="active" (click)="toggleMenu()" >Home</a>
+    <a routerLink="/projects" routerLinkActive="active" (click)="toggleMenu()" >Projects</a>
+    <a routerLink="/skills" routerLinkActive="active" (click)="toggleMenu()" >Skills</a>
+    <a routerLink="/education" routerLinkActive="active" (click)="toggleMenu()" >Education</a>
+    <a routerLink="/contact" routerLinkActive="active" (click)="toggleMenu()" >Contact</a>
+  </div>
 </nav>
 
 <router-outlet></router-outlet>

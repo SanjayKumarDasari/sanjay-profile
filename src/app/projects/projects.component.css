@@ -12,18 +12,19 @@
 .container {
     display: flex;
     height: 100vh; /* Full viewport height */
-    color: #343434; /* Text color for contrast */
     margin: 0 0;
     padding: 0%;
     font-family: 'Lato', sans-serif; /* Smooth, readable font for body text */
     text-align: center;
-    color: #555; /* Softer text color */
     align-items: center; /* Center items vertically */
     justify-content: center; /* Center items horizontally */
     overflow: hidden; /* Hide overflow from the container */
   }
 
  /* Add this to your CSS file */
+ h3 {
+  color: #b5b5b5; /* Text color for contrast */
+ }
 
 .projects-section {
   display: flex;
@@ -42,9 +43,9 @@
 .project-card {
   display: flex;
   flex-direction: row;
-  background-color: rgba(255, 255, 255, 0.1); /* Slightly white transparent background */
+  background-color: #0b0b0b; /* Slightly white transparent background */
   border-radius: 15px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px rgba(34, 125, 152, 0.2);
   opacity: 0.5; /* Start with faded */
   transform: scale(0.9); /* Slightly scaled down */
   transition: all 0.5s ease;
@@ -70,7 +71,7 @@
 .project-card.highlighted {
   opacity: 1; /* Make fully visible */
   transform: scale(1); /* Scale to full size */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Stronger shadow */
+  box-shadow: 0 8px 16px rgba(34, 125, 152, 0.4); /* Stronger shadow */
   z-index: 10; /* Ensure it's on top */
 }
 
@@ -90,7 +91,7 @@
 .image-section {
   flex: 1;
   padding: 10px;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(28, 28, 28, 0.2);
 }
 
 .image-section img {
@@ -102,6 +103,7 @@
 .content-section {
   flex: 2;
   padding: 30px;
+  max-width: 100%;
 }
 
 p {
@@ -110,15 +112,35 @@ p {
   justify-content: center;
   text-align: center;
   line-height: 1;
+  color: #9a9a9a;; /* Text color for contrast */
 }
+
 
 @media (max-width: 768px) {
   .project-card {
-      flex-direction: column;
+    flex-direction: column;
+    width: 100%; /* Ensure the card takes full width in mobile view */
+    max-width: 100%; /* Prevent overflow */
+    box-sizing: border-box; /* Ensure padding is included in the width */
   }
 
   .image-section,
   .content-section {
-      width: 100%;
+    width: 100%; /* Make the image and content sections take up the full width */
+  }
+
+  .content-section {
+    padding: 20px;
+    max-width: 100%; /* Prevent the text from overflowing */
+    box-sizing: border-box; /* Ensure padding does not affect width */
+  }
+
+  p {
+    white-space: normal; /* Allow text to wrap normally */
+    word-wrap: break-word; /* Break long words when necessary */
+    overflow-wrap: break-word; /* Ensure words wrap correctly */
+    max-width: 100%; /* Ensure the paragraph does not exceed the container width */
+    width: 100%; /* Make sure the text uses the full width of the container */
+    box-sizing: border-box; /* Include padding in the width calculation */
   }
 }

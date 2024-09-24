@@ -11,32 +11,74 @@ nav {
   position: fixed; /* Fix it at the top of the page */
   width: 100%; /* Full width */
   display: flex;
-  justify-content: right; /* Center the nav items */
+  justify-content: space-between; /* Space between logo and hamburger */
+  align-items: center; /* Center items vertically */
   padding: 15px 5vw; /* Space around the nav items */
   z-index: 1000; /* Keep it on top of other elements */
 }
 
 /* Nav Links */
+.nav-links {
+  display: flex; /* Use flex to align links horizontally */
+  gap: 20px; /* Space between links */
+}
+
 nav a {
   text-decoration: none; /* Remove underline */
-  color: #3b3a3a; /* Link text color */
+  color: #d9d9d9; /* Link text color */
   font-weight: bold; /* Bold text */
   padding: 5px 3vw; /* Space inside each link */
-  margin: 0 0px; /* Space between links */
+  margin: 0; /* Space between links */
   border-radius: 0px; /* Rounded corners */
-  /* background: rgba(0, 0, 0, 0.5); Semi-transparent background for nav links */
-  box-shadow: 0 0px 0px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  box-shadow: 0 0px 0px rgba(23, 98, 123, 0.774); /* Subtle shadow for depth */
   transition: background 0.3s, box-shadow 0.3s; /* Smooth transition on hover */
 }
 
 /* Hover Effects */
 nav a:hover {
-  /* background: rgba(255, 255, 255, 0.2); Lighten background on hover */
-  box-shadow: 0 0.5px 1px rgba(0, 0, 0, 0.4); /* Slightly stronger shadow on hover */
+  box-shadow: 0 0.5px 1px rgba(41, 123, 151, 0.84); /* Slightly stronger shadow on hover */
 }
 
 /* Active State */
 nav a.active {
-  /* background: rgba(255, 255, 255, 0.3); Highlight the active link */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Stronger shadow for active link */
+  box-shadow: 0 3px 10px rgba(72, 160, 189, 0.8); /* Stronger shadow for active link */
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  nav {
+    justify-content: space-between; /* Space between logo and hamburger */
+    padding: 10px 2vw; /* Adjust padding for mobile */
+  }
+
+  .hamburger {
+    display: flex; /* Show hamburger icon */
+    flex-direction: column;
+    cursor: pointer;
+  }
+
+  .hamburger div {
+    width: 25px; /* Width of hamburger bars */
+    height: 3px; /* Height of hamburger bars */
+    background-color: #d9d9d9; /* Color of hamburger bars */
+    margin: 3px 0; /* Spacing between bars */
+  }
+
+  /* Initially hide links on mobile */
+  .nav-links {
+    display: none; /* Hide links by default */
+    flex-direction: column; /* Stack links vertically */
+    position: absolute; /* Overlay links */
+    top: 60px; /* Position below the nav */
+    right: 0; /* Align to the right */
+    background: rgba(0, 0, 0, 0.8); /* Background for dropdown */
+    width: 100%; /* Full width dropdown */
+    padding: 10px 0; /* Additional padding */
+    z-index: 999; /* Ensure dropdown is above other content */
+  }
+
+  /* Show links when menu is open */
+  nav.active .nav-links {
+    display: flex; /* Show links when nav is active */
+  }
 }
