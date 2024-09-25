@@ -6,8 +6,11 @@
   padding-left: 20px;
   padding-right: 20px;
   height: 100vh;
+  margin: 0% auto;
   align-items: center; /* Center items vertically */
-  justify-content: flex-start; /* Align items to the start horizontally */
+  margin: 0 auto; /* Center the container */
+  align-items: center; /* Center items vertically */
+  justify-content: center; /* Start alignment for scrolling */
   scroll-snap-type: x mandatory; /* Enable scroll snapping */
 }
 
@@ -78,4 +81,16 @@
 .education-container {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
+}
+
+
+@media (max-width: 1000px) {
+
+  .education-container {
+    align-items: center; /* Center items vertically */
+    margin: 0 auto; /* Center the container */
+    align-items: center; /* Center items vertically */
+    justify-content: flex-start; /* Start alignment for scrolling */
+    scroll-snap-type: x mandatory; /* Enable scroll snapping */
+  }
 }

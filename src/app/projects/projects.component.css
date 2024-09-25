@@ -34,7 +34,7 @@
   padding: 100px 20px 20px; /* Adjust padding as needed */
   position: relative;
   z-index: 10; /* Ensure it stays above lower elements */
-  height: 50%; /* Full height of the container */
+  height: 40%; /* Full height of the container */
   overflow-y: auto; /* Enable vertical scrolling */
   scroll-snap-type: y mandatory; /* Enable snap scrolling */
 }
@@ -123,6 +123,10 @@ p {
     max-width: 100%; /* Prevent overflow */
     box-sizing: border-box; /* Ensure padding is included in the width */
   }
+  
+.projects-section {
+  height: 70%; /* Full height of the container */
+}
 
   .image-section,
   .content-section {
