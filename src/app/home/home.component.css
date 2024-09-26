@@ -107,6 +107,7 @@ img:hover {
         align-items: center;
         margin-top: 20px; /* Spacing for the image below */
         width: 100%; /* Full width for mobile */
+        max-width: 500px;
     }
 
     img {

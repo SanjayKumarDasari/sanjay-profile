@@ -29,7 +29,6 @@ export class ProjectsComponent implements AfterViewInit {
   
 
   onScroll(): void {
-    console.log("scroll");
     const cards = this.el.nativeElement.querySelectorAll('.project-card');
     const section = this.el.nativeElement.querySelector('.projects-section');
     const sectionRect = section.getBoundingClientRect();

@@ -52,16 +52,39 @@ nav a.active {
   }
 
   .hamburger {
-    display: flex; /* Show hamburger icon */
+    display: flex;
     flex-direction: column;
     cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    transition: transform 0.7s ease; /* Add transition for smooth rotation */
   }
-
+  
   .hamburger div {
-    width: 25px; /* Width of hamburger bars */
-    height: 3px; /* Height of hamburger bars */
-    background-color: #d9d9d9; /* Color of hamburger bars */
-    margin: 3px 0; /* Spacing between bars */
+    width: 25px;
+    height: 4px;
+    background-color: #cfcfcf;
+    margin: 3px 0;
+    transition: all 0.7s ease; /* Smooth transition for the bars */
+  }
+  
+  /* Active state for the hamburger icon */
+  .hamburger.active div:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 10px;
+  }
+  
+  .hamburger.active div:nth-child(2) {
+    width: 0; /* Hide the middle bar */
+  }
+  
+  .hamburger.active div:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    bottom: 10px;
   }
 
   /* Initially hide links on mobile */
